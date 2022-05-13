@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <title>Tailwind css Tutorial</title>
+</head>
+
+<body class="bg-cyan-400">
+
+  <nav class="bg-white shadow w-full p-4 flex md:flex-row justify-between items-center">
+    <div class="container md-mx-auto md:flex-row px-8">
+      <a href="">
+        <span class="text-indigo-400 text-3xl hover:text-red-400 duration-400">Django Todo</span>
+      </a>
+    </div>
+    <ul class="flex md:flex justify-between items-center ">
+      <button class="shadow bg-cyan-400 text-white p-3 mx-3 w-20">Sign up</button>
+      <button class="shadow bg-cyan-400 text-white p-3 mx-3">Login</button>
+    </ul>
+  </nav>
+
+  <main class="container mx-auto relative justify-center items-center">
+    <div class="mt-8 absolute top-1/2 left-1/2 -translate-x-2/4 translate-y-2/4 z-0 text-center">
+      <h1 class="text-7xl m-4">Welcome to my my Todo app</h1>
+      <button class="bg-indigo-500 p-3 rounded shadow text-white hover:bg-indigo-700 mt-5">Get Started now!</button>
+    </div>
+
+    <aside class="mt-5 w-1/2 mx-auto z-20 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-2/4 ">
+      <form action="" class=" container mx-auto bg-white p-3 hidden rounded">
+
+        <h2 class="text-center text-2xl text-indigo-500 font-bold my-10">Sign up</h2>
+
+        <label for="" class="label">Username</label>
+        <input type="text" placeholder="Username" class="form-input">
+        
+        <label for="" class="label">email</label>
+        <input type="email" placeholder="example@gmail.com" class="form-input">
+  
+        <label for="" class="label">password</label>
+        <input type="password" name="'password1" placeholder="password" class="form-input">
+  
+        <label for="" class="label">confirm password</label>
+        <input type="password" name="'password2" placeholder=" confirm password" class="form-input">
+        
+        <p><input type="checkbox" name="accept" id=""> I have read and accepted the <a href="">Terms and condition</a></p>
+        <button type="submit" class="bg-red-500 p-3 w-full rounded-lg">Sign up</button>
+      </form>
+  
+      <!-- login form  -->
+  
+      <form action="" method="post" class=" container mx-auto bg-white p-5 rounded hidden">
+        <h3 class="text-center text-indigo-400 text-3xl my-3">Login</h3>
+
+        <label for="username" class="label">Username</label>
+        <input type="text" placeholder="username" name="username" class="form-input">
+  
+        <label for="password" class="label">password</label>
+        <input type="password" name="password1" placeholder="password" class="form-input ">
+  
+        <button type="submit" class="bg-red-400 w-full p-3 rounded mt-2">Login</button>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="bg-[#333] p-3 text-center absolute bottom-0 w-full">
+    Designed by <a href="" class="text-[#fff] hover:text-indigo-400">me</a>
+  </footer>
+
+</body>
+
+</html>

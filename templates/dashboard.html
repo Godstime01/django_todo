@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Django todo: all Todo</title>
+          <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-cyan-400">
+          <nav class="bg-white shadow w-full p-4 flex md:flex-row justify-between items-center">
+                    <div class="container md-mx-auto md:flex-row px-8">
+                    <a href="">
+                    <span class="text-indigo-400 text-3xl hover:text-red-400 duration-400">Django Todo</span>
+                    </a>
+                    </div>
+                    <div class="flex md:flex justify-between items-center ">
+                              <!-- <button class="shadow bg-cyan-400 text-white p-3 mx-3 w-20"></button> -->
+                              <span>Welcome <a href="" class="text-gray-300">Username</a></span>
+                    </div>
+          </nav>
+
+          <main class="mt-30 min-h-[90vh]">
+                    <div class="container my-4 mx-auto  flex flex-row  gap-4 justify-center items-stretch h-[85vh]">
+                              <div class="bg-blue-400 w-1/4 rounded p-4">
+                                        <!-- all task -->
+                                        <div class="ring rounded text-center p-5 ">
+                                                  <h2>All Task <span>5</span></h2>
+                                        </div>
+
+                                        <!-- completed -->
+                                        <div class="ring rounded text-center p-5 ">
+                                                  <h2>Completed Task <span>3</span></h2>
+                                        </div>
+
+                                        <!-- completion rate -->
+                                        <div class="ring rounded text-center p-5 ">
+                                                  <h2>Task completion rate <span>50%</span></h2>
+                                        </div>
+                              </div>
+                              <!--  add todo -->
+                              <div class="bg-white rounded p-4">
+                                        <form action="" method="post">
+                                                  <input type="text" placeholder="add todo" class="form-input !inline p-3">
+                                                  <button type="submit" class="bg-green-50 p-3 bg-red-400"> Add Todo</button>
+                                        </form>
+
+                                        <div class="">
+                                                  <ul>
+                                                            <li class="bg-[#333] p-3 m-4">Eat food</li>
+                                                            <li class="bg-[#333] p-3 m-4">Sleep </li>
+                                                            <li class="bg-[#333] p-3 m-4">Breathe three times daily</li>
+                                                  </ul>
+                                        </div>
+                              </div>
+                              <!-- all completed task -->
+                              <div class="bg-white rounded p-4 ">
+                                        <h2 class="text-3xl font-bold text-center">{{User}} you have completed the following task</h2>
+                                        <ul>
+                                                  <li class="bg-[#333] p-3 m-4">Eat food</li>
+                                                  <li class="bg-[#333] p-3 m-4">Sleep </li>
+                                                  <li class="bg-[#333] p-3 m-4">Breathe three times daily</li>
+                                        </ul>
+                              </div>
+                    </div>
+          </main>
+</body>
+</html>
