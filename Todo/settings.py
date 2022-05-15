@@ -19,7 +19,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
-
+print(DEBUG)
 ALLOWED_HOSTS = ['*']
 
 
@@ -34,15 +34,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # third-party app
-    "tailwind",
+    # "tailwind",
     # "django-browser-reload",
     
     # my apps
     'todoapp',
-    'theme'
 ]
 
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+# NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,17 +54,17 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Todo.urls'
-TAILWIND_APP_NAME = 'theme'
+# TAILWIND_APP_NAME = 'theme'
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,8 +80,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Todo.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -134,3 +131,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'dashboard' # new
+LOGOUT_REDIRECT_URL = 'home' # new
